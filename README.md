@@ -1,1 +1,1 @@
-# CICD_Java_gradle_application
+## Java-spring-tomcat-application
