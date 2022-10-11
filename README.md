@@ -15,7 +15,7 @@ In this project we are going a CI-CD pipeline on ```Jenkins``` to deploy ```Java
 ## Pipeline stages
 
 - Sonar Quality Check
-```json
+```sh
 stage("Sonar Quality Check"){
     steps{
         script{
