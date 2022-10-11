@@ -1,6 +1,6 @@
 # Java-spring-tomcat-application CI-CD
 
-In this project we are going a CI-CD pipeline on Jenkins to deploy Java Spring Application on a tomcat container using Kubernetes.
+In this project we are going a CI-CD pipeline on Jenkins to deploy Java Spring Application on a Tomcat container using Kubernetes.
 
 ## Tools used to build pipeline
 
