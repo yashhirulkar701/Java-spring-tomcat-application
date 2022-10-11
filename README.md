@@ -14,7 +14,7 @@ In this project we are going a CI-CD pipeline on ```Jenkins``` to deploy ```Java
 
 ## Pipeline stages
 
-### 1) Sonar Quality Check
+### 1) Sonar Quality Check for static code analysis
 ```sh
 stage("Sonar Quality Check"){
     steps{
@@ -35,7 +35,7 @@ stage("Sonar Quality Check"){
     }
 }
 ```
-### 2) Build and Push Docker image
+### 2) Build and Push Docker image to Nexus Artifactory
 ```sh
 stage("Docker build & Push"){
     steps{
@@ -69,7 +69,7 @@ stage("Helm charts validation"){
     } 
 }
 ```
-### 4) Validate Helm chart configuration
+### 4) Stage to take manual approval before deployment
 ```sh
 stage("Manual Approval"){
     steps{
