@@ -12,4 +12,28 @@ In this project we are going a CI-CD pipeline on ```Jenkins``` to deploy ```Java
 - [Datree](https://www.datree.io/) - To validate the helm charts
 - [Kubernetes](https://kubernetes.io/) - To deploy the Java application on Tomcat container
 
+## Pipeline stages
+
+- Sonar Quality Check
+```json
+stage("Sonar Quality Check"){
+    steps{
+        script{
+            withSonarQubeEnv('sonar-server') {
+                sh '''
+                chmod +x gradlew
+                ./gradlew sonarqube
+                '''
+            }
+            timeout(30) {
+                def qg = waitForQualityGate()
+                    if (qg.status != 'OK') {
+                        error "Pipeline aborted due to quality gate failure: ${qg.status}"
+                    }
+            }
+        }  
+    }
+}
+```
+
 
