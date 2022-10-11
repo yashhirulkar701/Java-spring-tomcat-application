@@ -1,11 +1,15 @@
-## Java-spring-tomcat-application
+# Java-spring-tomcat-application CI-CD
 
-This application is java spring boot web application  
+In this project we are going a CI-CD pipeline on Jenkins to deploy Java Spring Application on a tomcat container using Kubernetes.
 
-build tool is ** gradle **
+## Tools used to build pipeline
 
-when we build the code using command ```./gradlew build ``` it will generate war file. that war can be placed in tomcat server to see application web page
+- [Jenkins](https://www.jenkins.io/) - To build CI-CD pipeline
+- [Gradle](https://gradle.org/) - To build the Java package 
+- [SonarQube](https://www.sonarqube.org/) - To do static Code Analysis
+- [Nexus](https://www.sonatype.com/) - To store the Artifacts
+- [Docker](https://www.docker.com/) - To build and push docker image 
+- [Datree](https://www.datree.io/) - To validate the helm charts
+- [Kubernetes](https://kubernetes.io/) - To deploy the Java application on Tomcat container
 
-code is integrated with sonarqube plugin which help us in static code analysis 
 
-``` ./gradlew sonarqube ```
