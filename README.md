@@ -1,7 +1,7 @@
 # Java-spring-tomcat-application CI-CD
-
+<p align="center">
 <img width="319" alt="speing" src="https://user-images.githubusercontent.com/65728956/195344100-58b87a58-83cd-4e83-b1e4-20c74f1f6f44.png">
-
+</p>
 In this project we are going a CI-CD pipeline on ```Jenkins``` to deploy ```Java Spring``` Application on a ```Tomcat``` container using ```Kubernetes```.
 
 ## Tools used to build pipeline
